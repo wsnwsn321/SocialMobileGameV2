@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4adb7ba4d3e3249bab46ebfd179071b7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - gameover: {instanceID: 0}
+  - gs: {instanceID: 0}
+  - shootSound: {fileID: 8300000, guid: ef1e86ca8c0654db7a9ca2534ec27a8c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

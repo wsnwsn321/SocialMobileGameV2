@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: c7a4cfdbe52ed4e88a1f637fa26254ef
+  - enabled: 1
+    path: Assets/Scenes/Main_Menu.unity
+    guid: 6e0a5cc3de04f474bbd65512159488a8
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: 554a41da786234f54a759a754299468d
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 2b451132f76e943d8ab9e0b4d4297697
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 140431984485d4cb489b0a51be481b1d
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 7d51182d8b03d444aa1e5947e6b28f58
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: 496ab3da193b540bfa8e51661e8c6d07
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: 780a279ea2f932143aab7ffad41dec6f
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 624bde4cb753d4e0193cacadc64fa6ca
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: f906ddeb62b7240a99070adf788a5407
+  - enabled: 1
+    path: Assets/Scenes/OptionMenu.unity
+    guid: 9f67be29af33f432db5399cce2813a72
+  m_configObjects: {}
