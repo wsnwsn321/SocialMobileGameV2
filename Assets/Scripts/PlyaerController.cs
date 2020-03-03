@@ -7,8 +7,10 @@ public class PlyaerController : MonoBehaviour
 {
     public float jumpForce = 2.0f;
     public bool isGrounded;
-    public GameObject gameover;     public Rigidbody2D rb;
-    public bool dead,gameStart,canJump;
+    public bool shield;
+    public GameObject gameover;
+    public Rigidbody2D rb;
+    public bool dead, gameStart, canJump;
     public GameObject bottomCollider;
     public GameSuccess gs;
     private Vector3 jumpDirection;
@@ -34,19 +36,16 @@ public class PlyaerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)||Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             if (gameStart)
             {
-                if (isGrounded && !dead&&canJump)
+                if (isGrounded && !dead && canJump)
                 {
-                    source.PlayOneShot(jump, 1);
-                    rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
-                    isGrounded = false;
-                    canJump = false;
+                    jumpBall();
                 }
 
-          
+
             }
             else
             {
@@ -55,7 +54,7 @@ public class PlyaerController : MonoBehaviour
             }
 
         }
-        if(this.gameObject.name != "controller")
+        if (this.gameObject.name != "controller")
         {
             if (transform.position.x < -5 || transform.position.x > 5 || transform.position.y < -5 && !gs.ended)
             {
@@ -70,8 +69,15 @@ public class PlyaerController : MonoBehaviour
 
             }
         }
-       
 
+
+    }
+    public void jumpBall()
+    {
+        source.PlayOneShot(jump, 1);
+        rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+        isGrounded = false;
+        canJump = false;
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -90,7 +96,7 @@ public class PlyaerController : MonoBehaviour
                 isGrounded = true;
                 canJump = true;
             }
-           
+
 
         }
 
@@ -113,7 +119,7 @@ public class PlyaerController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "stick"|| col.gameObject.tag == "floor")
+        if (col.gameObject.tag == "stick" || col.gameObject.tag == "floor")
         {
             isGrounded = true;
         }
