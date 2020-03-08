@@ -18,4 +18,9 @@ public class rotator : MonoBehaviour
 
         transform.RotateAround(anchor.transform.position, Vector3.forward, rotateSpeed * Time.deltaTime);
     }
+
+    public void setRotateSpeed(float inputRotateSpeed)
+    {
+        rotateSpeed = inputRotateSpeed;
+    }
 }
