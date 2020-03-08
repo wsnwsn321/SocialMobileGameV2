@@ -26,15 +26,26 @@ public class SpikeDead : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player"&&!gs.ended)
+
+        if (col.gameObject.tag == "Player" && !gs.ended)
         {
-            if (play&&!player.dead)
+            if (player.shield)
             {
-                source.PlayOneShot(shootSound, 1);
-                play = false;
+                player.jumpBall();
+                player.shield = false;
+                Debug.Log("pop shield" + gameObject.name);
             }
-            player.dead = true;
-            gameover.SetActive(true);
+            else
+            {
+                Debug.Log("player hit");
+                if (play && !player.dead)
+                {
+                    source.PlayOneShot(shootSound, 1);
+                    play = false;
+                }
+                player.dead = true;
+                gameover.SetActive(true);
+            }
 
         }
 
