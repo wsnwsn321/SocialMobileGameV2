@@ -7,11 +7,13 @@ public class PlyaerController : MonoBehaviour
 {
     public float jumpForce = 2.0f;
     public bool isGrounded;
+    public bool isMagnetic;
     public bool shield;
     public GameObject gameover;
     public Rigidbody2D rb;
     public bool dead, gameStart, canJump;
     public GameObject bottomCollider;
+    public GameObject starMagnet;
     public GameSuccess gs;
     private Vector3 jumpDirection;
     public int currentStar;
@@ -36,6 +38,12 @@ public class PlyaerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isMagnetic){
+            starMagnet.transform.position = new Vector2 (transform.position.x, transform.position.y);
+        }else{
+            starMagnet.transform.position = new Vector2 (1920, 1080);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             if (gameStart)
@@ -128,6 +136,10 @@ public class PlyaerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         isGrounded = false;
+    }
+
+    public void buttonhandler(){
+        isMagnetic = !isMagnetic;
     }
 
 }

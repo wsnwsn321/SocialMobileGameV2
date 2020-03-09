@@ -32,7 +32,7 @@ public class star : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.name.Equals("StarMagnet")){
+        if(col.gameObject.name.Equals("starMagnet")){
             timeStamp = Time.time;
             //circlePlayer = GameObject.Find("Player");
             circlePlayer = GameObject.FindWithTag("Player");
