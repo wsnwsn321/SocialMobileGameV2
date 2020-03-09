@@ -34,6 +34,7 @@ public class SpikeDead : MonoBehaviour
                 player.jumpBall();
                 player.shield = false;
                 Debug.Log("pop shield" + gameObject.name);
+                Destroy(gameObject);
             }
             else
             {
