@@ -23,7 +23,7 @@ public class PowerSlowButton : MonoBehaviour
         foreach(GameObject spinningObject in spinnings)
         {
             rotator spinning = (rotator)spinningObject.GetComponent(typeof(rotator));
-            spinning.setRotateSpeed(50);
+            spinning.setRotateSpeed((float)(spinning.rotateSpeed * 0.3f));
         }
     }
 }

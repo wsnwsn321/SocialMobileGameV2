@@ -418,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: octagon
       objectReference: {fileID: 0}
+    - target: {fileID: 7844180891120482729, guid: 0ecb382a40142794f8136e6dd9881aa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: spinning circle
+      objectReference: {fileID: 0}
     - target: {fileID: 9130941058573428296, guid: 0ecb382a40142794f8136e6dd9881aa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,6 +607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: square-break
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756234344965310329, guid: 9c58c00391c2eb042b64d6fe22065c2a,
+        type: 3}
+      propertyPath: m_TagString
+      value: spinning circle
       objectReference: {fileID: 0}
     - target: {fileID: 2779317489292655865, guid: 9c58c00391c2eb042b64d6fe22065c2a,
         type: 3}
