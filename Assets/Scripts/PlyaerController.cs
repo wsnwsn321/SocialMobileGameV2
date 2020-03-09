@@ -28,6 +28,7 @@ public class PlyaerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         dead = false;
         gameStart = false;
+        shield = false;
         canJump = true;
         isMagnetic = false;
         rb.gravityScale = 0;
@@ -144,7 +145,9 @@ public class PlyaerController : MonoBehaviour
     }
     public void bubblePowerUp()
     {
-        shield = true;
+        Debug.Log("shield activated");
+        shield = !shield;
+
         //gameObject.SetActive(false);
     }
 }
