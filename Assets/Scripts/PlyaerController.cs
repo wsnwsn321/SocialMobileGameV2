@@ -29,6 +29,7 @@ public class PlyaerController : MonoBehaviour
         dead = false;
         gameStart = false;
         canJump = true;
+        isMagnetic = false;
         rb.gravityScale = 0;
         currentStar = 0;
         source = GetComponent<AudioSource>();
