@@ -1377,5 +1377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triangle
       objectReference: {fileID: 0}
+    - target: {fileID: 7844180891120482729, guid: 81ff9527a8d9b464e91977e7d1a1fcbb,
+        type: 3}
+      propertyPath: m_TagString
+      value: spinning circle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81ff9527a8d9b464e91977e7d1a1fcbb, type: 3}
