@@ -142,5 +142,9 @@ public class PlyaerController : MonoBehaviour
     public void buttonhandler(){
         isMagnetic = !isMagnetic;
     }
-
+    public void bubblePowerUp()
+    {
+        shield = true;
+        gameObject.SetActive(false);
+    }
 }
