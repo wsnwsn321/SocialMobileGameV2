@@ -1643,6 +1643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: circle player
       objectReference: {fileID: 0}
+    - target: {fileID: 2141031429887807924, guid: 34ccbcd29939342b5a07b7c76ec75a53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2246993904780321061, guid: 34ccbcd29939342b5a07b7c76ec75a53,
         type: 3}
       propertyPath: gameover

@@ -62,6 +62,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,6 +74,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -131,12 +133,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 6
   isGrounded: 0
+  isMagnetic: 0
+  shield: 1
   gameover: {fileID: 0}
   rb: {fileID: 2141031429887807927}
   dead: 0
   gameStart: 0
   canJump: 0
   bottomCollider: {fileID: 0}
+  starMagnet: {fileID: 0}
   gs: {fileID: 0}
   currentStar: 0
   shootSound: {fileID: 8300000, guid: 2d484e4c78c174d66a6a85746ac27c1e, type: 3}
@@ -262,6 +267,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2141031429887807921}
     m_Modifications:
+    - target: {fileID: 100000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: m_Name
       value: ErekiBall2
@@ -273,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: m_LocalPosition.x
@@ -329,34 +342,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -458691587
-      objectReference: {fileID: 0}
-    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
-      propertyPath: m_RenderMode
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: EmissionModule.enabled
@@ -425,6 +410,26 @@ PrefabInstance:
     - target: {fileID: 19800002, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
       propertyPath: EmissionModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -458691587
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}
+      propertyPath: m_RenderMode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200e650fba6c8492b87e96e4bc273510, type: 3}

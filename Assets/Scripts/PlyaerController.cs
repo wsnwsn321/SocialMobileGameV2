@@ -145,6 +145,6 @@ public class PlyaerController : MonoBehaviour
     public void bubblePowerUp()
     {
         shield = true;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }
