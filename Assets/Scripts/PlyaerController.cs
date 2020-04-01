@@ -22,6 +22,8 @@ public class PlyaerController : MonoBehaviour
     public AudioClip jump;
     public AudioClip sw;
     public AudioClip lose;
+    [SerializeField]
+    private UnlockLevels script;
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +98,7 @@ public class PlyaerController : MonoBehaviour
             currentStar++;
             Destroy(col.gameObject);
             source.PlayOneShot(shootSound, 1);
+            script.callStarCollected();
         }
 
         if (col.gameObject.tag == "stick" || col.gameObject.tag == "floor")
